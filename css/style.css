@@ -1,0 +1,308 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+section {
+    padding: 0 10px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0 0 10px;
+    z-index: 10;
+    backdrop-filter: blur(2px);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.nav {
+    width: 800px;
+    padding: 10px 0 0;
+}
+.nav__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav__item {
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.link {
+    position: relative;
+    color: #000;
+}
+.link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    left: 50%;
+    height: 2px;
+    width: 0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    background: rgb(0, 0, 0);
+    box-shadow: 1px 4px 0px rgb(0, 0, 0);
+}
+
+.link:hover:after {
+    width: 100%;
+    left: 0;
+}
+img {
+    border-radius: 15px;
+}
+.home__img {
+    width: 100%;
+}
+
+.home {
+    padding-bottom: 100px;
+}
+.home__inner {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    font-size: 35px;
+    font-weight: bold;
+}
+strong {
+    font-weight: bolder;
+}
+.my__name {
+    font-size: 40px;
+}
+.my__profession {
+    text-align: end;
+    line-height: 30px;
+    font-size: 24px;
+}
+
+.about__me {
+    padding: 100px 0;
+    background-color: rgba(219, 219, 219, 0.5);
+}
+.about__me__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.about__me__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 700px;
+}
+.about__me__title {
+    text-align: center;
+}
+.about__me__text {
+    font-size: 26px;
+    width: 100%;
+    line-height: 32px;
+}
+.about__me__img {
+    width: 40%;
+}
+
+.skills {
+    padding: 100px 0;
+}
+.skills__title {
+    display: flex;
+    justify-content: center;
+}
+.skills__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+.skills__content__form {
+    width: 400px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(26, 26, 26);
+    color: #fff;
+    border-radius: 3px;
+}
+.form__title {
+    text-align: center;
+    font-size: 25px;
+}
+.form__skills {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    background-color: rgb(53, 51, 50);
+    border-radius: 15px;
+}
+.form__skills__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form__skills__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.skill__name {
+    font-size: 20px;
+}
+.skill__mark {
+    font-size: 18px;
+}
+.skill__mark::after {
+    content: "%";
+}
+.skill__progress {
+    width: 100%;
+    height: 4px;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(31, 44, 44);
+}
+
+.rendered__progress {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.rendered__progress::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+}
+.rendered__progress::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgb(228, 228, 228);
+}
+
+.contacts {
+    padding: 50px 0;
+    background-color: rgba(219, 219, 219, 0.5);
+}
+.contacts__title {
+    display: flex;
+    justify-content: center;
+}
+.contacts__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+}
+.contact__logo {
+    font-size: 60px;
+}
+
+.contact__name {
+    font-size: 29px;
+}
+
+@media (max-width: 1200px) {
+    .about__me__inner {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .nav__list {
+        padding: 0 20px;
+    }
+    .home__inner {
+        flex-direction: column;
+    }
+    .my__profession {
+        text-align: left;
+    }
+    .skills__content__form {
+        width: 700px;
+    }
+}
+
+@media (max-width: 660px) {
+    .form__skills__wrap {
+        flex-wrap: wrap;
+    }
+    .skill__name,
+    .skill__mark {
+        font-size: 15px;
+    }
+    .nav__item {
+        font-size: 16px;
+    }
+    .about__me__inner {
+        flex-wrap: wrap;
+    }
+    .skills__content__form,
+    .about__me__img {
+        width: 100%;
+    }
+    .contact {
+        padding: 20px;
+    }
+}
+@media (max-width: 450px) {
+    .nav__item {
+        font-size: 12px;
+    }
+}
+@media (max-width: 330px) {
+    .nav__list {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+    }
+    .home__img {
+        display: none;
+    }
+    .nav__item {
+        font-size: 90%;
+    }
+}
